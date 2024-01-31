@@ -7,7 +7,12 @@ namespace Game.TechTree
         /// <summary>
         /// 这个建筑是否只能在运河时代建造
         /// </summary>
-        public bool IsTemp { get; }
+        public bool IsCanalAgeOnly { get; }
+
+        /// <summary>
+        /// 这个建筑是否只能在铁路时代建造
+        /// </summary>
+        public bool IsRailwayAgeOnly { get; }
 
         /// <summary>
         /// 建造这个建筑需要的金币
@@ -71,7 +76,8 @@ namespace Game.TechTree
         public TechNode Next = null;
 
         #region Interface Implementes
-        bool IReadOnlyTechNode.IsTemp => Data.IsTemp;
+        bool IReadOnlyTechNode.IsCanalAgeOnly => Data.IsCanalAgeOnly;
+        bool IReadOnlyTechNode.IsRailwayAgeOnly => Data.IsRailwayAgeOnly;
         ushort IReadOnlyTechNode.Cost => Data.Cost;
         bool IReadOnlyTechNode.CanUpgrade => Data.CanUpgrade;
         IReadOnlyTechTypeVector<ushort> IReadOnlyTechNode.ItemCost => Data.ItemCost;
@@ -102,46 +108,61 @@ namespace Game.TechTree
         /// <summary>
         /// 这个建筑是否只能在运河时代建造
         /// </summary>
-        public bool IsTemp;
+        [Tooltip("这个建筑是否只能在运河时代建造")]
+        public bool IsCanalAgeOnly;
+
+        /// <summary>
+        /// 这个建筑是否只能在铁路时代建造
+        /// </summary>
+        [Tooltip("这个建筑是否只能在铁路时代建造")]
+        public bool IsRailwayAgeOnly;
 
         /// <summary>
         /// 建造这个建筑需要的金币
         /// </summary>
+        [Tooltip("建造这个建筑需要的金币")]
         public ushort Cost;
 
         /// <summary>
         /// 这个等级的建筑是否可被研发
         /// </summary>
+        [Tooltip("这个等级的建筑是否可被研发")]
         public bool CanUpgrade;
 
         /// <summary>
         /// 建造此建筑需要哪些资源
         /// </summary>
+        [Tooltip("建造此建筑需要哪些资源")]
         public TechTypeVector<ushort> ItemCost = new TechTypeVector<ushort>();
 
         /// <summary>
-        /// 相同建筑的数量
+        /// 同等级下相同建筑的数量
         /// </summary>
+        [Tooltip("同等级下相同建筑的数量")]
         public ushort Count;
 
         /// <summary>
         /// 得分收益
         /// </summary>
+        [Tooltip("得分收益")]
         public ushort Score;
 
         /// <summary>
         /// 道路价值
         /// </summary>
+        [Tooltip("道路价值")]
         public ushort RoadValue;
 
         /// <summary>
         /// 经济收益
         /// </summary>
+        [Tooltip("经济收益")]
         public ushort EconomyValue;
 
         /// <summary>
         /// 建造此建筑后需要哪些资源才能够使其产生收益。
         /// </summary>
+        [Tooltip("建造此建筑后需要哪些资源才能够使其产生收益。")]
         public TechTypeVector<ushort> ItemNeeds = new TechTypeVector<ushort>();
 
         
@@ -152,7 +173,7 @@ namespace Game.TechTree
         public TechNodeData Clone()
         {
             TechNodeData newData = new TechNodeData();
-            newData.IsTemp = IsTemp;
+            newData.IsCanalAgeOnly = IsCanalAgeOnly;
             newData.Cost = Cost;
             newData.CanUpgrade = CanUpgrade;
             newData.ItemCost = ItemCost.Clone();

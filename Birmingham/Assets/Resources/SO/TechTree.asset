@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a638246516ca6d14983f2bf808c57f69, type: 3}
   m_Name: TechTree
   m_EditorClassIdentifier: 
-  prototypes:
+  _initial:
     _serializedList: []
