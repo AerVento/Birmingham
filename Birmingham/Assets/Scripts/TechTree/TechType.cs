@@ -15,11 +15,6 @@ namespace Game.TechTree
         Cotton = 0,
 
         /// <summary>
-        /// æ∆
-        /// </summary>
-        Wine,
-
-        /// <summary>
         /// Ã’¥…
         /// </summary>
         Ceramics,
@@ -28,6 +23,11 @@ namespace Game.TechTree
         /// ∞ÂÃıœ‰
         /// </summary>
         Crate,
+
+        /// <summary>
+        /// æ∆
+        /// </summary>
+        Wine,
 
         /// <summary>
         /// √∫Ãø≥ß

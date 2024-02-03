@@ -5,14 +5,14 @@ namespace Game.TechTree
     public interface IReadOnlyTechNode
     {
         /// <summary>
-        /// 这个建筑是否只能在运河时代建造
+        /// 这个建筑是否能在运河时代建造
         /// </summary>
-        public bool IsCanalAgeOnly { get; }
+        public bool IsCanalAge { get; }
 
         /// <summary>
-        /// 这个建筑是否只能在铁路时代建造
+        /// 这个建筑是否能在铁路时代建造
         /// </summary>
-        public bool IsRailwayAgeOnly { get; }
+        public bool IsRailwayAge { get; }
 
         /// <summary>
         /// 建造这个建筑需要的金币
@@ -76,8 +76,8 @@ namespace Game.TechTree
         public TechNode Next = null;
 
         #region Interface Implementes
-        bool IReadOnlyTechNode.IsCanalAgeOnly => Data.IsCanalAgeOnly;
-        bool IReadOnlyTechNode.IsRailwayAgeOnly => Data.IsRailwayAgeOnly;
+        bool IReadOnlyTechNode.IsCanalAge => Data.IsCanalAgeOnly;
+        bool IReadOnlyTechNode.IsRailwayAge => Data.IsRailwayAgeOnly;
         ushort IReadOnlyTechNode.Cost => Data.Cost;
         bool IReadOnlyTechNode.CanUpgrade => Data.CanUpgrade;
         IReadOnlyTechTypeVector<ushort> IReadOnlyTechNode.ItemCost => Data.ItemCost;

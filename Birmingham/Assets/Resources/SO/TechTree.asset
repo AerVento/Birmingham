@@ -13,4 +13,36 @@ MonoBehaviour:
   m_Name: TechTree
   m_EditorClassIdentifier: 
   _initial:
-    _serializedList: []
+    _serializedList:
+    - Key: 0
+      Value:
+      - Front: {fileID: 21300000, guid: 892a592a6f72be74ab0594093cb8b33d, type: 3}
+        Back: {fileID: 21300000, guid: 24e4ca268612a4e4d80c17dcf0debd61, type: 3}
+        Data:
+          IsCanalAgeOnly: 1
+          IsRailwayAgeOnly: 0
+          Cost: 12
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000000
+          Count: 1
+          Score: 5
+          RoadValue: 0
+          EconomyValue: 5
+          ItemNeeds:
+            _array: 000001000000000000000000
+      - Front: {fileID: 0}
+        Back: {fileID: 0}
+        Data:
+          IsCanalAgeOnly: 0
+          IsRailwayAgeOnly: 0
+          Cost: 0
+          CanUpgrade: 0
+          ItemCost:
+            _array: 000000000000000000000000
+          Count: 0
+          Score: 0
+          RoadValue: 0
+          EconomyValue: 0
+          ItemNeeds:
+            _array: 000000000000000000000000
