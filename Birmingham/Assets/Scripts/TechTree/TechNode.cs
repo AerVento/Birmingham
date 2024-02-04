@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game.TechTree
+namespace Game.Tech
 {
     public interface IReadOnlyTechNode
     {
@@ -69,15 +69,14 @@ namespace Game.TechTree
     /// <summary>
     /// 科技树结点
     /// </summary>
-    [System.Serializable]
     public class TechNode : IReadOnlyTechNode
     {
         public TechNodeData Data;
         public TechNode Next = null;
 
         #region Interface Implementes
-        bool IReadOnlyTechNode.IsCanalAge => Data.IsCanalAgeOnly;
-        bool IReadOnlyTechNode.IsRailwayAge => Data.IsRailwayAgeOnly;
+        bool IReadOnlyTechNode.IsCanalAge => Data.IsCanalAge;
+        bool IReadOnlyTechNode.IsRailwayAge => Data.IsRailwayAge;
         ushort IReadOnlyTechNode.Cost => Data.Cost;
         bool IReadOnlyTechNode.CanUpgrade => Data.CanUpgrade;
         IReadOnlyTechTypeVector<ushort> IReadOnlyTechNode.ItemCost => Data.ItemCost;
@@ -98,7 +97,7 @@ namespace Game.TechTree
 
         public TechNode Clone()
         {
-            return new TechNode(Data.Clone(), Next ?? Next.Clone());
+            return new TechNode(Data.Clone(), Next?.Clone());
         }
     }
 
@@ -106,16 +105,16 @@ namespace Game.TechTree
     public class TechNodeData
     {
         /// <summary>
-        /// 这个建筑是否只能在运河时代建造
+        /// 这个建筑是否能在运河时代建造
         /// </summary>
-        [Tooltip("这个建筑是否只能在运河时代建造")]
-        public bool IsCanalAgeOnly;
+        [Tooltip("这个建筑是否能在运河时代建造")]
+        public bool IsCanalAge;
 
         /// <summary>
-        /// 这个建筑是否只能在铁路时代建造
+        /// 这个建筑是否能在铁路时代建造
         /// </summary>
-        [Tooltip("这个建筑是否只能在铁路时代建造")]
-        public bool IsRailwayAgeOnly;
+        [Tooltip("这个建筑是否能在铁路时代建造")]
+        public bool IsRailwayAge;
 
         /// <summary>
         /// 建造这个建筑需要的金币
@@ -173,7 +172,7 @@ namespace Game.TechTree
         public TechNodeData Clone()
         {
             TechNodeData newData = new TechNodeData();
-            newData.IsCanalAgeOnly = IsCanalAgeOnly;
+            newData.IsCanalAge = IsCanalAge;
             newData.Cost = Cost;
             newData.CanUpgrade = CanUpgrade;
             newData.ItemCost = ItemCost.Clone();

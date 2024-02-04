@@ -1,4 +1,5 @@
-using Game.TechTree;
+using Game.Tech;
+using System.Collections.Generic;
 
 namespace Game.Map
 {
@@ -40,6 +41,11 @@ namespace Game.Map
         /// </summary>
         /// <param name="other">另一个城市</param>
         public bool IsConnectedByRailway(CityName other);
+
+        /// <summary>
+        /// 与该城市邻接的所有城市
+        /// </summary>
+        public IEnumerable<CityName> Neighbours { get; }
     }
 
     public static class CityFactory

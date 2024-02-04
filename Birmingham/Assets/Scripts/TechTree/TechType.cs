@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.TechTree
+namespace Game.Tech
 {
     /// <summary>
     /// 科技种类
@@ -98,5 +98,16 @@ namespace Game.TechTree
         }
     }
 
-
+    public static class TechTypeUtils
+    {
+        /// <summary>
+        /// 该科技类型是否属于经济建筑。经济建筑包含板条箱、棉花、陶瓷。
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static bool IsEconomy(this TechType type)
+        {
+            return type == TechType.Cotton || type == TechType.Ceramics || type == TechType.Crate;
+        }
+    }
 }

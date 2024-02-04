@@ -1,5 +1,5 @@
 using Game.Player;
-using Game.TechTree;
+using Game.Tech;
 
 namespace Game.Map
 {
@@ -34,9 +34,25 @@ namespace Game.Map
         public PlayerEnum Player { get; private set; }
 
         /// <summary>
-        /// 该建筑是否正产生收益。如果不产生收益，则道路得分、建筑得分、经济收益均无效。产生收益需要使用一定的资源。
+        /// 该建筑产生收益所需要的物品。根据科技类型不同，这个字段代表的意思也不同。
         /// </summary>
-        public bool IsProfiting { get; set; }
+        public TechTypeVector<ushort> ItemNeeds { get; private set; }
+
+        /// <summary>
+        /// 该建筑是否正在产生收益
+        /// </summary>
+        public bool IsProfiting
+        {
+            get
+            {
+                foreach(var num in ItemNeeds)
+                {
+                    if (num.Value != 0)
+                        return false;
+                }
+                return true;
+            }
+        }
 
         /// <summary>
         /// 创建一个建筑信息
@@ -53,7 +69,7 @@ namespace Game.Map
             Index = index;
             Tech = tech;
             Player = player;
-            IsProfiting = false;
+            ItemNeeds = tech.ItemNeeds.Clone();
         }
 
         /// <summary>

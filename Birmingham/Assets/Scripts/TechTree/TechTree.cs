@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game.TechTree
+namespace Game.Tech
 {
     /// <summary>
     /// 科技树
@@ -26,23 +26,43 @@ namespace Game.TechTree
     /// <summary>
     /// 科技树
     /// </summary>
-    [System.Serializable]
     public class TechTree : IReadOnlyTechTree
     {
-        [SerializeField]
         private TechType _type;
         /// <summary>
         /// 科技树的种类
         /// </summary>
         public TechType Type => _type;
 
-        [SerializeField]
-        private TechNode _root;
+        private TechNode _root = null;
+        
         /// <summary>
         /// 科技树的根节点
         /// </summary>
-        public TechNode Root => _root;
+        public TechNode Root
+        {
+            get { return _root; }
+            set { _root = value; }
+        }
 
+        /// <summary>
+        /// 该科技树中，将每一级科技的数量相加得到的总和
+        /// </summary>
+        /// <see cref="TechNodeData.Count"/>
+        public ushort Total
+        {
+            get
+            {
+                ushort ans = 0;
+                TechNode node = _root;
+                while(node != null)
+                {
+                    ans += node.Data.Count;
+                    node = node.Next;
+                }
+                return ans;
+            }
+        }
 
         #region Interface Implements
         IReadOnlyTechNode IReadOnlyTechTree.Root => _root;
@@ -56,7 +76,7 @@ namespace Game.TechTree
 
         public TechTree Clone()
         {
-            return new TechTree(_type, _root ?? _root.Clone());
+            return new TechTree(_type, _root?.Clone());
         }
 
     }

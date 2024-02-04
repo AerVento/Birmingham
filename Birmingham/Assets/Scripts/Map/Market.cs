@@ -1,4 +1,5 @@
-using Game.TechTree;
+using Game.Tech;
+using System.Collections.Generic;
 
 namespace Game.Map
 {
@@ -158,6 +159,7 @@ namespace Game.Map
         public ushort GridCount => 0; // 交易所肯定没有格子来建造建筑
 
         public abstract MapChangingEvent Callback { get; }
+        public abstract IEnumerable<CityName> Neighbours { get; }
 
         public TechTypeVector<bool> GetAvailables(ushort index) // 交易所既然没有格子，index无论取何值都会越界
         {
@@ -167,5 +169,31 @@ namespace Game.Map
         public abstract bool IsConnectedByCanal(CityName other);
         public abstract bool IsConnectedByRailway(CityName other);
         #endregion
+    }
+
+    public static class MarketUtils
+    {
+        /// <summary>
+        /// 交易所格子售卖的类型是否包含此科技类型。
+        /// </summary>
+        /// <param name="sellType">交易所格子售卖类型</param>
+        /// <param name="techType">科技类型</param>
+        /// <returns></returns>
+        public static bool IsSelling(this MarketSellType sellType, TechType techType)
+        {
+            switch (sellType)
+            {
+                case MarketSellType.Cotton:
+                case MarketSellType.Ceramics:
+                case MarketSellType.Crate:
+                    return (int)techType == (int)sellType;
+                case MarketSellType.Triple:
+                    return techType == TechType.Cotton || techType == TechType.Ceramics || techType == TechType.Crate;
+                
+                case MarketSellType.Empty:
+                default:
+                    return false;
+            }
+        }
     }
 }

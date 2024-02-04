@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using Game.TechTree;
+using Game.Tech;
 
 [CustomPropertyDrawer(typeof(TechTypeVector<>))]
 public class TechTypeVectorDrawer : PropertyDrawer
@@ -12,11 +12,10 @@ public class TechTypeVectorDrawer : PropertyDrawer
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
         EditorGUI.BeginProperty(position, label, property);
-        _isFoldOut = EditorGUI.Foldout(new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight), _isFoldOut, new GUIContent(property.name, GetTooltip()), true);
+        _isFoldOut = EditorGUI.Foldout(new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight), _isFoldOut, new GUIContent(property.displayName, GetTooltip()), true);
         position.y += EditorGUIUtility.singleLineHeight;
-
         // Indent the content of the property
-        position = EditorGUI.IndentedRect(position);
+        EditorGUI.indentLevel++;
         if (_isFoldOut)
         {
             // Get the serialized list property
@@ -31,7 +30,7 @@ public class TechTypeVectorDrawer : PropertyDrawer
                 position.y += EditorGUIUtility.singleLineHeight + _margin;
             }
         }
-        
+        EditorGUI.indentLevel--; 
         EditorGUI.EndProperty();
     }
 

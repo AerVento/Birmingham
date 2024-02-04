@@ -1,5 +1,5 @@
 using Game.Player;
-using Game.TechTree;
+using Game.Tech;
 
 namespace Game.Map
 {
@@ -8,7 +8,7 @@ namespace Game.Map
     /// </summary>
     /// <param name="map">发生变化的地图对象</param>
     /// <param name="context">变换回调上下文</param>
-    public delegate void MapChangingEvent(Map map, MapChangeContext context);
+    public delegate void MapChangingEvent(GameMap map, MapChangeContext context);
 
     /// <summary>
     /// 每次地图改变时回调的上下文

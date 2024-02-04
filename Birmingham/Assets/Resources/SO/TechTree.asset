@@ -16,33 +16,390 @@ MonoBehaviour:
     _serializedList:
     - Key: 0
       Value:
-      - Front: {fileID: 21300000, guid: 892a592a6f72be74ab0594093cb8b33d, type: 3}
-        Back: {fileID: 21300000, guid: 24e4ca268612a4e4d80c17dcf0debd61, type: 3}
-        Data:
-          IsCanalAgeOnly: 1
-          IsRailwayAgeOnly: 0
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 0
           Cost: 12
           CanUpgrade: 1
           ItemCost:
             _array: 000000000000000000000000
-          Count: 1
+          Count: 3
           Score: 5
-          RoadValue: 0
+          RoadValue: 1
           EconomyValue: 5
           ItemNeeds:
-            _array: 000001000000000000000000
-      - Front: {fileID: 0}
-        Back: {fileID: 0}
-        Data:
-          IsCanalAgeOnly: 0
-          IsRailwayAgeOnly: 0
-          Cost: 0
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 14
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000001000000
+          Count: 2
+          Score: 5
+          RoadValue: 2
+          EconomyValue: 4
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 16
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000001000100
+          Count: 3
+          Score: 9
+          RoadValue: 1
+          EconomyValue: 3
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 18
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000001000100
+          Count: 3
+          Score: 12
+          RoadValue: 1
+          EconomyValue: 2
+          ItemNeeds:
+            _array: 000000000000010000000000
+    - Key: 1
+      Value:
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 17
           CanUpgrade: 0
           ItemCost:
-            _array: 000000000000000000000000
-          Count: 0
-          Score: 0
-          RoadValue: 0
-          EconomyValue: 0
+            _array: 000000000000000000000100
+          Count: 1
+          Score: 10
+          RoadValue: 1
+          EconomyValue: 5
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 0
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000001000000
+          Count: 1
+          Score: 1
+          RoadValue: 1
+          EconomyValue: 1
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 22
+          CanUpgrade: 0
+          ItemCost:
+            _array: 000000000000000002000000
+          Count: 1
+          Score: 11
+          RoadValue: 1
+          EconomyValue: 5
+          ItemNeeds:
+            _array: 000000000000020000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 0
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000001000000
+          Count: 1
+          Score: 1
+          RoadValue: 1
+          EconomyValue: 1
           ItemNeeds:
             _array: 000000000000000000000000
+      - Data:
+          IsCanalAge: 0
+          IsRailwayAge: 1
+          Cost: 24
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000002000000
+          Count: 1
+          Score: 20
+          RoadValue: 1
+          EconomyValue: 5
+          ItemNeeds:
+            _array: 000000000000000002000000
+    - Key: 2
+      Value:
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 0
+          Cost: 8
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000001000000
+          Count: 1
+          Score: 3
+          RoadValue: 2
+          EconomyValue: 5
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 10
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000100
+          Count: 2
+          Score: 5
+          RoadValue: 1
+          EconomyValue: 1
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 12
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000002000000
+          Count: 1
+          Score: 4
+          RoadValue: 0
+          EconomyValue: 4
+          ItemNeeds:
+            _array: 000000000000000000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 14
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000100
+          Count: 1
+          Score: 3
+          RoadValue: 1
+          EconomyValue: 6
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 16
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000100
+          Count: 2
+          Score: 8
+          RoadValue: 2
+          EconomyValue: 2
+          ItemNeeds:
+            _array: 000000000000020000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 20
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000000
+          Count: 1
+          Score: 7
+          RoadValue: 1
+          EconomyValue: 6
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 16
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000001000100
+          Count: 1
+          Score: 9
+          RoadValue: 0
+          EconomyValue: 4
+          ItemNeeds:
+            _array: 000000000000000000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 20
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000200
+          Count: 2
+          Score: 11
+          RoadValue: 1
+          EconomyValue: 1
+          ItemNeeds:
+            _array: 000000000000000000000100
+    - Key: 3
+      Value:
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 0
+          Cost: 5
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000100
+          Count: 2
+          Score: 4
+          RoadValue: 2
+          EconomyValue: 4
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 7
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000100
+          Count: 2
+          Score: 5
+          RoadValue: 2
+          EconomyValue: 5
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 9
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000100
+          Count: 2
+          Score: 7
+          RoadValue: 2
+          EconomyValue: 5
+          ItemNeeds:
+            _array: 000000000000010000000000
+      - Data:
+          IsCanalAge: 0
+          IsRailwayAge: 1
+          Cost: 9
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000100
+          Count: 1
+          Score: 10
+          RoadValue: 2
+          EconomyValue: 5
+          ItemNeeds:
+            _array: 000000000000020000000000
+    - Key: 4
+      Value:
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 0
+          Cost: 5
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000000
+          Count: 1
+          Score: 1
+          RoadValue: 2
+          EconomyValue: 4
+          ItemNeeds:
+            _array: 000000000000000002000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 7
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000000
+          Count: 2
+          Score: 2
+          RoadValue: 1
+          EconomyValue: 7
+          ItemNeeds:
+            _array: 000000000000000003000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 8
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000100
+          Count: 2
+          Score: 3
+          RoadValue: 1
+          EconomyValue: 6
+          ItemNeeds:
+            _array: 000000000000000004000000
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 10
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000100
+          Count: 2
+          Score: 4
+          RoadValue: 1
+          EconomyValue: 5
+          ItemNeeds:
+            _array: 000000000000000005000000
+    - Key: 5
+      Value:
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 0
+          Cost: 5
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000001000000
+          Count: 1
+          Score: 3
+          RoadValue: 1
+          EconomyValue: 3
+          ItemNeeds:
+            _array: 000000000000000000000400
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 7
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000001000000
+          Count: 1
+          Score: 5
+          RoadValue: 1
+          EconomyValue: 3
+          ItemNeeds:
+            _array: 000000000000000000000400
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 9
+          CanUpgrade: 0
+          ItemCost:
+            _array: 000000000000000001000000
+          Count: 1
+          Score: 7
+          RoadValue: 1
+          EconomyValue: 2
+          ItemNeeds:
+            _array: 000000000000000000000500
+      - Data:
+          IsCanalAge: 1
+          IsRailwayAge: 1
+          Cost: 12
+          CanUpgrade: 1
+          ItemCost:
+            _array: 000000000000000000000100
+          Count: 1
+          Score: 9
+          RoadValue: 1
+          EconomyValue: 1
+          ItemNeeds:
+            _array: 000000000000000000000600

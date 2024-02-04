@@ -24,12 +24,21 @@ namespace Game.Util
             {
                 int j = random.Next(0, i + 1);
                 // 交换元素
-                T temp = list[i];
-                list[i] = list[j];
-                list[j] = temp;
+                (list[j], list[i]) = (list[i], list[j]);
             }
 
             return list;
+        }
+
+        /// <summary>
+        /// 将一个对象转换成可枚举对象
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static IEnumerable<T> ToEnumerable<T>(this T obj)
+        {
+            return new T[] { obj };
         }
     }
 }
